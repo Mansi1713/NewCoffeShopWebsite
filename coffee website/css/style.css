@@ -645,7 +645,7 @@ body {
     font-size: 20px;
   }
   
-  #myBtn {
+  #myBuuttons {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -661,6 +661,10 @@ body {
     border-radius: 4px;
   }
   
-  #myBtn:hover {
+  #myBuuttons:hover {
     background-color: #555;
+  }
+  .footer,.links,.share
+  {
+      background: url("footer.jpg");
   }
