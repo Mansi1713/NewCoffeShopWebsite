@@ -1,84 +1,146 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Store and cart</title>
+        <title>CAFENA | Store and cart</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="store.js" async></script>
     <link rel="stylesheet" href="css/style.css">
-       <script src="store.js" async></script>
+    <link rel="stylesheet" href="css/storeStyle.css">
+
     </head>
     <body>
-        <header class="main-header">
-            <nav class="main-nav nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="store.html">STORE</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>
+        <script>
+            function myFunction() {
+              var txt;
+              if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+              } else {
+                txt = "You pressed Cancel!";
+              }
+              document.getElementById("demo").innerHTML = txt;
+            }
+            </script>
+        <header class="header">
+
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="">
+            </a>
+        
+            <nav class="navbar">
+                <a href="index.html#home">home</a>
+                <a href="index.html#about">about</a>
+                <a href="index.html#menu">menu</a>
+                <a href="index.html#review">review</a>
+                <a href="index.html#contact">contact</a>
+                <a href="index.html#blogs">blogs</a>
             </nav>
-            <h1 class="band-name band-name-large">The Generics</h1>
-        </header>
+        
+            <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <a href="store.html" onclick="myFunction()"><div class="fas fa-shopping-cart" id="cart-btn"></div></a>
+                <div class="fas fa-bars" id="menu-btn"></div>
+            </div>
+        
+            <div class="search-form">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </div>
+            </header>
         <section class="container content-section">
             <h2 class="section-header">MUSIC</h2>
             <div class="shop-items">
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 1</span>
-                    <img class="shop-item-image" src="Images/Album 1.png">
+                    <span class="shop-item-title">Coffee</span>
+                    <img class="shop-item-image" src="Images/shop1.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$12.99</span>
+                        <span class="shop-item-price">Rs.120</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 2</span>
-                    <img class="shop-item-image" src="Images/Album 2.png">
+                    <span class="shop-item-title">Special coffee</span>
+                    <img class="shop-item-image" src="Images/CC1.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$14.99</span>
+                        <span class="shop-item-price">Rs.150</span>
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 3</span>
-                    <img class="shop-item-image" src="Images/Album 3.png">
+                    <span class="shop-item-title">Sandwich</span>
+                    <img class="shop-item-image" src="Images/Sandwhich.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$9.99</span>
+                        <span class="shop-item-price">Rs.100</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Album 4</span>
-                    <img class="shop-item-image" src="Images/Album 4.png">
+                    <span class="shop-item-title">Momos</span>
+                    <img class="shop-item-image" src="Images/Momoms.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$19.99</span>
+                        <span class="shop-item-price">Rs.145</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </section>
         <section class="container content-section">
-            <h2 class="section-header">MERCH</h2>
+            <h2 class="section-header"></h2>
             <div class="shop-items">
                 <div class="shop-item">
-                    <span class="shop-item-title">T-Shirt</span>
-                    <img class="shop-item-image" src="Images/Shirt.png">
+                    <span class="shop-item-title">Pizza</span>
+                    <img class="shop-item-image" src="Images/pizza.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$19.99</span>
+                        <span class="shop-item-price">Rs.190</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-item">
-                    <span class="shop-item-title">Coffee Cup</span>
-                    <img class="shop-item-image" src="Images/Cofee.png">
+                    <span class="shop-item-title">Peri peri</span>
+                    <img class="shop-item-image" src="Images/periperi.jpg">
                     <div class="shop-item-details">
-                        <span class="shop-item-price">$6.99</span>
+                        <span class="shop-item-price">Rs.50</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Thick creamy coffee</span>
+                    <img class="shop-item-image" src="Images/thickcreamy.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs.150</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Cheese Pasta</span>
+                    <img class="shop-item-image" src="Images/pasta.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs.60</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Ice cream</span>
+                    <img class="shop-item-image" src="Images/icecreams.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs.30</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Pastry</span>
+                    <img class="shop-item-image" src="Images/pastry2.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">Rs.20</span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </section>
+        <hr>
         <section class="container content-section">
             <h2 class="section-header">CART</h2>
             <div class="cart-row">
@@ -90,27 +152,30 @@
             </div>
             <div class="cart-total">
                 <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
+                <span class="cart-total-price">Rs.0</span>
             </div>
             <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
         <footer class="main-footer">
             <div class="container main-footer-container">
-                <h3 class="band-name">The Generics</h3>
+                <h3 class="band-name">CAFENA</h3>
                 <ul class="nav footer-nav">
                     <li>
-                        <a href="https://www.youtube.com" target="_blank">
-                            <img src="Images/YouTube Logo.png">
+                        <a href="#" target="_blank">
+                           <label style="color: midnightblue;">Facebook(Meta)</label>
+                            <i class="fab fa-facebook-square"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.spotify.com" target="_blank">
-                            <img src="Images/Spotify Logo.png">
+                        <a href="#" target="_blank">
+                            <label style="color: midnightblue;">Instagram</label>
+                            <i class="fab fa-instagram-square"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com" target="_blank">
-                            <img src="Images/Facebook Logo.png">
+                        <a href="#" target="_blank">
+                            <label style="color: midnightblue;">Twitter</label>
+                            <i class="fab fa-twitter-square"></i>
                         </a>
                     </li>
                 </ul>
