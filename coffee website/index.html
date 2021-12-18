@@ -325,17 +325,17 @@
             <h3>get in touch</h3>
             <div class="inputBox">
                 <span class="fas fa-user"></span>
-                <input type="text" placeholder="name">
+                <input type="text" name="name" onchange="WriteCookie()"/>
             </div>
             <div class="inputBox">
                 <span class="fas fa-envelope"></span>
                 <input type="email" placeholder="email">
             </div>
             <div class="inputBox">
-                <span class="fas fa-phone"></span>
-                <input type="number" placeholder="number">
+                <span class="fas fa-phone" ></span>
+                <input type="number" name="number" onchange="WriteCookie()" onclick="mobileNumber()"id="" YOUR ELEMENT ID placeholder="number">
             </div>
-            <input type="submit" value="contact now" class="btn">
+            <input type="submit"   value="contact now" class="btn" >
         </form>
 
     </div>
@@ -445,11 +445,27 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-    </script>
+    
     
 
 
+  
+    function mobileNumber(){
 
+var Number = document.getElementById('YOUR ELEMENT ID').value;
+var IndNum = /^[0]?[789]\d{9}$/;
+
+if(IndNum.test(Number)){
+   return;
+}
+
+else{
+   $('#errMessage').text('please enter valid mobile number');
+   document.getElementById('profile_telephoneNumber').focus();
+}
+
+}
+  </script>  
 
 
 
