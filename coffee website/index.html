@@ -333,9 +333,9 @@
             </div>
             <div class="inputBox">
                 <span class="fas fa-phone" ></span>
-                <input type="number" name="number" onchange="WriteCookie()" onclick="mobileNumber()"id="" YOUR ELEMENT ID placeholder="number">
+                <input type="number" name="number" onchange="WriteCookie()"  id="YOUR ELEMENT ID" placeholder="number">
             </div>
-            <input type="submit"   value="contact now" class="btn" >
+            <input type="submit" onclick="mobileNumber()"  value="contact now" class="btn" >
         </form>
 
     </div>
@@ -445,13 +445,8 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-    
-    
-
-
   
-    function mobileNumber(){
-
+function mobileNumber(){
 var Number = document.getElementById('YOUR ELEMENT ID').value;
 var IndNum = /^[0]?[789]\d{9}$/;
 
