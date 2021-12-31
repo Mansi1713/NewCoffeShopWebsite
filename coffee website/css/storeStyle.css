@@ -129,14 +129,10 @@ html, body {
 
 .btn-primary {
     color: white;
-    background-color: lightbrown;
+    background-color: #BD9A7A;
     border: none;
     border-radius: .3em;
     font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: brown;
 }
 
 .tour-row {

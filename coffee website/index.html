@@ -219,21 +219,21 @@
 
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1629452077891!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
 
-        <form action="">
+        <form name="form1" action="">
             <h3>get in touch</h3>
             <div class="inputBox">
                 <span class="fas fa-user"></span>
-                <input type="text" name="name" onchange="WriteCookie()"/>
+                <input type="text" name="name" id="name" onchange="WriteCookie()"/>
             </div>
             <div class="inputBox">
                 <span class="fas fa-envelope"></span>
-                <input type="email" placeholder="email">
+                <input type="email" id="email" name="email" placeholder="email">
             </div>
             <div class="inputBox">
                 <span class="fas fa-phone" ></span>
-                <input type="text" name="number" onchange="WriteCookie()" maxlength="10" minlength="10" id="YOUR ELEMENT ID"  placeholder="number">
+                <input type="text" name="number" onchange="WriteCookie()" maxlength="10" minlength="10" name="phone"  placeholder="number">
             </div>
-            <input type="submit" onclick="phoneno(document.form1.number)"  value="contact now" class="btn" >
+            <input type="submit" onclick="sendemail()" onclick="phoneNumberCheck(document.form1.phone)"  value="contact now" class="btn" >
         </form>
 
     </div>
@@ -346,19 +346,43 @@
       document.documentElement.scrollTop = 0;
     }
   
-    function phonenumber(inputtxt)
-{
-  var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-  if((inputtxt.value.match(phoneno)))
+    function phoneNumberCheck(phoneNumber)
     {
+    var regEx = "^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}";
+    if(phoneNumber.value.match(regEx))
+     {
       return true;
-    }
-    else
-    {
-        alert("message");
-        return false;
-    }
-}  </script>  
+     }
+   else
+     {
+     alert("Please enter a valid phone number.");
+     return false;
+     }
+    }    
+    </script>  
+    <script src="https://smtpjs.com/v3/smtp.js">
+	</script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script>
+            
+			function sendemail()
+			{
+                let email = document.getElementById("email").value;
+				Email.send({
+                Host : "smtp.gmail.com",
+                Username : "shopcoffe524@gmail.com",
+                Password : "coffee@12",
+                To : email,
+                From : "shopcoffe524@gmail.com",
+                Subject : "CAFENA COFFEE DAY",
+                Body : "Dear customer, Thank you for contacting!!We received your Email. Visit us again! Have a good day...!"
+            }).then(
+                 message => alert("Email received..!!")
+            );
+            }
+			</script>
+
 
 
 
