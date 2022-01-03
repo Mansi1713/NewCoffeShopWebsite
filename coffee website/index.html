@@ -233,7 +233,7 @@
                 <span class="fas fa-phone" ></span>
                 <input type="text" name="number" onchange="WriteCookie()" maxlength="10" minlength="10" name="phone"  placeholder="number">
             </div>
-            <input type="submit" onclick="sendemail()" onclick="phoneNumberCheck(document.form1.phone)"  value="contact now" class="btn" >
+            <input type="submit" onclick="sendemail()" onmouseover="phoneNumberCheck(document.form1.phone)"  value="contact now" class="btn" >
         </form>
 
     </div>
@@ -351,6 +351,7 @@
     var regEx = "^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}";
     if(phoneNumber.value.match(regEx))
      {
+         alert("Valid mobile no..!");
       return true;
      }
    else
