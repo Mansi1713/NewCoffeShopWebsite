@@ -231,9 +231,9 @@
             </div>
             <div class="inputBox">
                 <span class="fas fa-phone" ></span>
-                <input type="text" name="number" onchange="WriteCookie()" maxlength="10" minlength="10" name="phone"  placeholder="number">
+                <input type="text" name="phone" maxlength="10" minlength="10" name="phone"  placeholder="number">
             </div>
-            <input type="submit" onclick="sendemail()" onmouseover="phoneNumberCheck(document.form1.phone)"  value="contact now" class="btn" >
+            <input type="submit" onclick="sendemail()" value="contact now" class="btn" >
         </form>
 
     </div>
@@ -345,21 +345,7 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-  
-    function phoneNumberCheck(phoneNumber)
-    {
-    var regEx = "^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}";
-    if(phoneNumber.value.match(regEx))
-     {
-         alert("Valid mobile no..!");
-      return true;
-     }
-   else
-     {
-     alert("Please enter a valid phone number.");
-     return false;
-     }
-    }    
+     
     </script>  
     <script src="https://smtpjs.com/v3/smtp.js">
 	</script>
@@ -382,18 +368,16 @@
                  message => alert("Email received..!!")
             );
             }
+            function WriteCookie()
+            {
+                if( document.form1.name.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue = escape(document.form1.name.value) + ";";
+               document.cookie = "name=" + cookievalue;
+            }
 			</script>
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
